@@ -1,0 +1,5 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<app-game (tickEvent)="onTick($event)"></app-game>
+<div *ngFor="let odd of odds" ><app-odd [value]="odd"></app-odd></div>
+<app-even *ngFor="let even of evens" [value]="even"></app-even>
+
