@@ -7,31 +7,25 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class GameComponent implements OnInit {
 
-  run = false;
   i = 0;
+  interval;
   @Output() tickEvent = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit() {
-    setInterval(() => {
-      if (this.run) {
-        this.tryFire();
-      } }, 2000);
   }
 
   onStart() {
-    this.run = true;
+    this.interval = setInterval(() => { this.tryFire(); }, 2000);
   }
 
   onStop() {
-    this.run = false;
+    clearInterval(this.interval);
   }
 
   tryFire() {
-    if (this.run) {
       this.tickEvent.emit(this.i++);
       console.log(this.i);
-    }
   }
 }
