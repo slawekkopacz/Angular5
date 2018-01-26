@@ -1,4 +1,5 @@
-<p>
-  <app-server></app-server>
-  <app-server></app-server>
-</p>
+<button [disabled]="!allowNewServers">Add Server</button>
+<p [innerText]="allowNewServers"></p>
+<p>allowNewServers value: {{ allowNewServers }}</p>
+<app-server></app-server>
+<app-server></app-server>
