@@ -5,12 +5,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AlertComponent } from './alert/alert.component';
 import { WarningComponent } from './warning/warning.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlertComponent,
-    WarningComponent
+    WarningComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule
